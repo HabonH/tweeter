@@ -18,12 +18,20 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: source-sans-pro;
+  font-family: 'Source Sans Pro';
 }
-
-
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
  
+ .container{
+   display: flex;
+   flex-direction: column;
+   /* justify-content: center; */
+   align-items: stretch;
+   justify-content: center;
+   width: 90%;
+   margin-left: 5%;
+   background-color: #f4f1ec;
+  }
