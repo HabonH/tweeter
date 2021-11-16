@@ -1,9 +1,27 @@
 .header{
   display: flex;
+  flex-direction: column;
   height: 400px;
   width: 100%;
   border: 2px dotted ridge;
   justify-content: center;
   align-items: center;
+  background-color: #000201;
+  background-image: url("https://www.transparenttextures.com/patterns/inflicted.png");
+  
 }
+
+.header-img img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  padding-top: 150px;
+}
+
+.header-img{
+  display: flex;
+  justify-content: center;
+}
+
 
