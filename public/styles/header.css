@@ -1,0 +1,9 @@
+.header{
+  display: flex;
+  height: 400px;
+  width: 100%;
+  border: 2px dotted ridge;
+  justify-content: center;
+  align-items: center;
+}
+

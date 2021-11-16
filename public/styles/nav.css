@@ -1,0 +1,43 @@
+.nav {
+display: flex;
+height: 120px;
+justify-content: space-between;
+align-items: center;
+padding-right: 1.5em;
+padding-left: 1.5em;
+background-color: #4056A1;
+color: #FFFFFF;
+font-family: bungee;
+}
+
+.right-header{
+display: flex;
+flex-direction: column;
+align-items: center;
+font-family: source sans pro;
+font-weight: 600;
+
+}
+.a-new-tweet{
+display: flex;
+flex-direction: row;
+font-family: source sans pro;
+font-weight: 300;
+}
+
+.fas {
+  color: red;
+}
+
+.write{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
