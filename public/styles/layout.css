@@ -35,13 +35,13 @@ body {
    background-color: #f4f1ec;
   }
 
-  section.tweet-container{
+  section#tweets-container{
     display: flex;
     flex-direction: column;
     margin-top: 1.5em;
   }
   
-  section.tweet-container article{
+  section#tweets-container article{
     border-style: solid;
     margin-top: 2%;
     margin-bottom: 2%;
