@@ -36,12 +36,52 @@ body {
    background-color: #f4f1ec;
   }
 
-  .tweet-container{
+  section.tweet-container{
     display: flex;
     flex-direction: column;
-    
+  }
+  
+  section.tweet-container article{
+    border-style: solid;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: 'Source Sans Pro';
+  }
+  
+  article.tweet{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  header.tweet-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+  }
+  
+  article.tweet footer{
+    border-top: solid;
+    border-color: black;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    font-size: smaller;
+    margin-bottom: 0.5em;
   }
 
-  article.tweet-container{
-    border-style: solid;
+  article.tweet p{
+    padding-left: 1em;
+    padding-right: 1em;
   }
+
+ small{
+   margin-left: 1em;
+   margin-right: 1em;
+ }
+
+ strong{
+  color:thistle;
+ }
