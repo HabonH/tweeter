@@ -1,7 +1,7 @@
 .header{
   display: flex;
   flex-direction: column;
-  height: 400px;
+  height: 350px;
   width: 100%;
   border: 2px dotted ridge;
   justify-content: center;
@@ -16,7 +16,6 @@
   justify-content: center;
   align-items: center;
   width: 70%;
-  padding-top: 150px;
 }
 
 .header-img{
