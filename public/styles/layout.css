@@ -28,7 +28,6 @@ body {
  #container{
    display: flex;
    flex-direction: column;
-   /* justify-content: center; */
    align-items: stretch;
    justify-content: center;
    width: 90%;
@@ -76,6 +75,11 @@ body {
     padding-right: 0.5em;
     padding-top: 0.5em;
   }
+  .far{
+
+    padding-right: 0.5em;
+
+  }
 
   .tweet-footer{
     display: flex;
@@ -97,12 +101,20 @@ body {
 
 }
 
- strong{
-  color:thistle;
- }
+ .icons{ 
+  justify-content: space-between;
+  padding-top: 20px;
+  font-size: 0.73em;
+}
 
- .icons{
-   justify-content: space-between;
-   padding-top: 20px;
-   font-size: 0.73em;
+.icons .fas{
+  color: cornflowerblue;
+}
+
+/* .fa-flag, .fa-retweet, .fa-heart{
+
+ } */
+.fa-flag:hover, .fa-retweet:hover, .fa-heart:hover{
+  color: rgb(9, 59, 153);
+
  }
