@@ -48,10 +48,11 @@ body {
     font-family: 'Source Sans Pro';
   }
   
-  article.tweet{
+  article.tweet:hover{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 5px 10px #888888
   }
   
   article.tweet footer{
