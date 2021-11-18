@@ -6,32 +6,32 @@
 
 // Send a request to the API --> jQuery
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": timeago.format(new Date())
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": timeago.format(new Date())
+// const data = [
+//   {
+//     "user": {
+//       "name": "Newton",
+//       "avatars": "https://i.imgur.com/73hZDYK.png"
+//       ,
+//       "handle": "@SirIsaac"
+//     },
+//     "content": {
+//       "text": "If I have seen further it is by standing on the shoulders of giants"
+//     },
+//     "created_at": timeago.format(new Date())
+//   },
+//   {
+//     "user": {
+//       "name": "Descartes",
+//       "avatars": "https://i.imgur.com/nlhLi3I.png",
+//       "handle": "@rd"
+//     },
+//     "content": {
+//       "text": "Je pense , donc je suis"
+//     },
+//     "created_at": timeago.format(new Date())
 
-  }
-];
+//   }
+// ];
 
 
 const createTweetElement = function (tweet) {
@@ -64,25 +64,34 @@ const renderTweets = function (tweets) {
 };
 
 
+
 // Handler for .ready() called.
 $(document).ready(function () {
-  renderTweets(data);
-
-
+  function $loadtweets  () {
+    
+    $.get('/tweets').then(data => {
+      renderTweets(data);
+      console.log("SUCCESS!! ")
+    })
+    
+  };
+  $loadtweets();
 
   $('#data').on('submit', function (event) {
     event.preventDefault();
-    console.log("Hellooooo");
-    
-    const $value = $('#data').serialize()
+    // console.log("Hellooooo");
+
+    const $value = $('#data').serialize();
     $.post('/tweets', $value).then(function () {
-      console.log("Value--> ", $value)
-    
+      // console.log("Value--> ", $value);
+
     });
 
   });
-
 });
+
+
+
 
 // console.log("new DATA--->", ($('.tweets-container'))); // to see what it looks like
 // console.log("NEW TWEET -->", $value); // to see what it looks like
