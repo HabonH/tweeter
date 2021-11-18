@@ -33,6 +33,11 @@
 //   }
 // ];
 
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 const createTweetElement = function (tweetData) {
   let $tweet = `<article class="tweet">
@@ -40,7 +45,7 @@ const createTweetElement = function (tweetData) {
     <a><i class="far fa-smile"></i>${tweetData.user.name}</a>
     <strong>${tweetData.user.handle}</strong>
   </header>
-  <p>${tweetData.content.text}</p>
+  <p>${escape(tweetData.content.text)}</p>
   <footer class="tweetData-footer">
     <small>${timeago.format(tweetData.created_at)}</small>
     <div class="icons">
@@ -75,20 +80,29 @@ $(document).ready(function () {
     });
 
   };
-  
+
   $('#data').on('submit', function (event) {
     event.preventDefault();
     // console.log("Hellooooo");
-    
+
     if ($('#tweet-text').val().length === 0) {
-      return alert("Sorry, your tweet has no content. How will others know what you're humming?");
+      // return alert("Sorry, your tweet has no content. How will others know what you're humming?");
+      $(".error-msg").slideDown("slow", function () {
+      
+
+        return $(`Error- field is empty`);
+      });
     }
     if ($('#tweet-text').val().length > 140) {
-      return alert("Your tweet content is too long");
+      // return alert("Your tweet content is too long");
+      $(".error-msg").slideDown("slow", function () {
+        return $(`Error- too long`);
+      });
+
     } else {
       const $value = $(this).serialize();
       $.post('/tweets', $value).then(function () {
-        
+
         loadtweets();
       });
     }
