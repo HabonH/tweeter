@@ -46,7 +46,7 @@ const createTweetElement = function (tweetData) {
     <strong>${tweetData.user.handle}</strong>
   </header>
   <p>${escape(tweetData.content.text)}</p>
-  <footer class="tweetData-footer">
+  <footer class="tweet-footer">
     <small>${timeago.format(tweetData.created_at)}</small>
     <div class="icons">
       <i class="fas fa-flag"></i>
