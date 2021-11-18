@@ -73,11 +73,12 @@ $(document).ready(function () {
   $('#data').on('submit', function (event) {
     event.preventDefault();
     console.log("Hellooooo");
-
-    // $.post('/tweet', $value).then(function () {
-    //   const $value = $(event.target.data).serialize();
-
-    // });
+    
+    const $value = $('#data').serialize()
+    $.post('/tweets', $value).then(function () {
+      console.log("Value--> ", $value)
+    
+    });
 
   });
 
