@@ -1,10 +1,10 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+// /*
+//  * Client-side JS logic goes here
+//  * jQuery is already loaded
+//  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
+//  */
 
-// Send a request to the API --> jQuery
+// // Send a request to the API --> jQuery
 
 // const data = [
 //   {
@@ -17,7 +17,7 @@
 //     "content": {
 //       "text": "If I have seen further it is by standing on the shoulders of giants"
 //     },
-//     "created_at": timeago.format(new Date())
+//     "created_at": 1461116232227
 //   },
 //   {
 //     "user": {
@@ -28,21 +28,21 @@
 //     "content": {
 //       "text": "Je pense , donc je suis"
 //     },
-//     "created_at": timeago.format(new Date())
+//     "created_at": 1461113959088
 
 //   }
 // ];
 
 
-const createTweetElement = function (tweet) {
+const createTweetElement = function (tweetData) {
   let $tweet = `<article class="tweet">
   <header class="tweet-header">
-    <a><i class="far fa-smile"></i>${tweet.user.name}</a>
-    <strong>${tweet.user.handle}</strong>
+    <a><i class="far fa-smile"></i>${tweetData.user.name}</a>
+    <strong>${tweetData.user.handle}</strong>
   </header>
-  <p>${tweet.content.text}</p>
-  <footer class="tweet-footer">
-    <small>${tweet.created_at}</small>
+  <p>${tweetData.content.text}</p>
+  <footer class="tweetData-footer">
+    <small>${timeago.format(tweetData.created_at)}</small>
     <div class="icons">
       <i class="fas fa-flag"></i>
       <i class="fas fa-retweet"></i>
@@ -59,7 +59,7 @@ const createTweetElement = function (tweet) {
 const renderTweets = function (tweets) {
   for (const tweet of tweets) {
     // let $value = createTweetElement(tweet);
-    $('#tweets-container').append(createTweetElement(tweet));
+    $('#tweets-container').prepend(createTweetElement(tweet));
   }
 };
 
@@ -67,25 +67,31 @@ const renderTweets = function (tweets) {
 
 // Handler for .ready() called.
 $(document).ready(function () {
-  function $loadtweets  () {
-    
+  function loadtweets() {
+
     $.get('/tweets').then(data => {
       renderTweets(data);
-      console.log("SUCCESS!! ")
-    })
-    
-  };
-  $loadtweets();
+      // console.log("SUCCESS!! ");
+    });
 
+  };
+  
   $('#data').on('submit', function (event) {
     event.preventDefault();
     // console.log("Hellooooo");
-
-    const $value = $('#data').serialize();
-    $.post('/tweets', $value).then(function () {
-      // console.log("Value--> ", $value);
-
-    });
+    
+    if ($('#tweet-text').val().length === 0) {
+      return alert("Sorry, your tweet has no content. How will others know what you're humming?");
+    }
+    if ($('#tweet-text').val().length > 140) {
+      return alert("Your tweet content is too long");
+    } else {
+      const $value = $(this).serialize();
+      $.post('/tweets', $value).then(function () {
+        
+        loadtweets();
+      });
+    }
 
   });
 });
