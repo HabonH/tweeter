@@ -66,11 +66,22 @@ const renderTweets = function (tweets) {
 
 // Handler for .ready() called.
 $(document).ready(function () {
-
   renderTweets(data);
 
-  // console.log("NEW TWEET -->", $value); // to see what it looks like
-  console.log("new DATA--->", ($('#tweets-container'))); // to see what it looks like
 
+
+  $('#data').on('submit', function (event) {
+    event.preventDefault();
+    console.log("Hellooooo");
+
+    // $.post('/tweet', $value).then(function () {
+    //   const $value = $(event.target.data).serialize();
+
+    // });
+
+  });
 
 });
+
+// console.log("new DATA--->", ($('.tweets-container'))); // to see what it looks like
+// console.log("NEW TWEET -->", $value); // to see what it looks like
