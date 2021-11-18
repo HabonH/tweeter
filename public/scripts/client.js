@@ -74,30 +74,32 @@ const renderTweets = function (tweets) {
 $(document).ready(function () {
   function loadtweets() {
 
-    $.get('/tweets').then(data => {
+    $.get('/tweets').then(function(data) {
       renderTweets(data);
       // console.log("SUCCESS!! ");
     });
+    // loadtweets();
 
   };
 
   $('#data').on('submit', function (event) {
     event.preventDefault();
-    // console.log("Hellooooo");
-
+    $(".error-msg").hide();
     if ($('#tweet-text').val().length === 0) {
       // return alert("Sorry, your tweet has no content. How will others know what you're humming?");
-      $(".error-msg").slideDown("slow", function () {
-      
-
-        return $(`Error- field is empty`);
-      });
+      // $(".error-msg").slideDown("slow", function () {
+    
+      //   return $(`Error- field is empty`);
+      // });
+      $(".error-msg")
+        .html("Your tweet has no content. How will others know what you're humming?")
+        .slideDown();
     }
     if ($('#tweet-text').val().length > 140) {
       // return alert("Your tweet content is too long");
-      $(".error-msg").slideDown("slow", function () {
-        return $(`Error- too long`);
-      });
+      $(".error-msg")
+        .html("Oh no! Your tweet content is too long. Don't worry, you can try again.")
+        .slideDown();
 
     } else {
       const $value = $(this).serialize();
