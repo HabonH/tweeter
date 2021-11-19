@@ -66,10 +66,10 @@ When a user submits a valid tweet, the list of tweets is refreshed (displaying t
 > Desktop and Tablet design after tweets
 
 
-!["Mobile design before tweets"](https://github.com/HabonH/tweeter/blob/master/docs/mobile-version.png)
+!["Mobile design before tweets"](https://github.com/HabonH/tweeter/blob/master/docs/Mobile-version1.png)
 > Mobile design before tweets
 
-!["Mobile design after tweets"](https://github.com/HabonH/tweeter/blob/master/docs/Mobile-version1.png)
+!["Mobile design after tweets"](https://github.com/HabonH/tweeter/blob/master/docs/mobile-version.png)
 > Mobile design after tweets
 
 !["Mobile design timeline"](https://github.com/HabonH/tweeter/blob/master/docs/mobile-version-timeline.png)
