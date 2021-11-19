@@ -18,13 +18,13 @@
 #tweet-text{
   padding-top: 20px;
   margin-bottom: 0.5em;
+  margin-top: 2.5rem;
   border-top: transparent;
   border-right: transparent;
   border-left: transparent;
-  border-bottom-color: black;
   border-bottom-width: thick;
+  border-bottom-color: black;
   background-color: #f4f1ec;
-  /* font-family: source-sans-pro; */
   font-weight: 600;
 
 }

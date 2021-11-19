@@ -11,12 +11,13 @@ html {
 }
 
 /*
- * Global layout stuff
- */
+* Global layout stuff
+*/
 
 body {
   color: #545149;
   background-color: #f4f1ec;
+  width: 100vw;
   font-size: 24px;
   font-family: 'Source Sans Pro';
 }
@@ -30,7 +31,7 @@ body {
    flex-direction: column;
    align-items: stretch;
    justify-content: center;
-   width: 90%;
+   width: 90vw;
    margin-left: 5%;
    background-color: #f4f1ec;
   }
@@ -90,17 +91,11 @@ body {
     justify-content: space-between;
   }
 
- footer.tweet-footer small{
+ footer.tweet-footer small, div{
    margin-left: 1em;
    margin-right: 1em;
 
  }
-
- footer.tweet-footer div{
-  margin-left: 1em;
-  margin-right: 1em;
-
-}
 
  .icons{ 
   justify-content: space-between;
@@ -112,22 +107,75 @@ body {
   color: cornflowerblue;
 }
 
-/* .fa-flag, .fa-retweet, .fa-heart{
-
- } */
 .fa-flag:hover, .fa-retweet:hover, .fa-heart:hover{
   color: rgb(9, 59, 153);
+}
 
- }
+.error-msg{
+  color: #D8000C;
+  background-color: #FFBABA;
+  background-image: url('https://i.imgur.com/GnyDvKN.png');
+  border: 1px solid;
+  margin: 10px auto;
+  padding: 15px 10px 15px 50px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  max-width: 460px;
+}
+ 
+ 
+@media only screen and (min-width: 1024px) and (max-width: 1440px)  {
+  body{
+    display: flex;
+    flex-direction: column;
+  }
+  .header-main-container{
+    display: flex;
+    flex-direction: row;
+  }
 
- .error-msg{
-   color: #D8000C;
-   background-color: #FFBABA;
-   background-image: url('https://i.imgur.com/GnyDvKN.png');
-   border: 1px solid;
-   margin: 10px auto;
-   padding: 15px 10px 15px 50px;
-   background-repeat: no-repeat;
-   background-position: 10px center;
-   max-width: 460px;
- }
+  #container{
+    height: 50vh;
+    position:relative;
+    
+  }
+
+  #container #tweets-container{
+    height: 23rem;
+  }
+
+  header.header{
+    margin-top: 7rem;
+  }
+  .header-img{
+    padding-top: 5rem
+  }
+}
+/* /* /*Tablet Styles */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  body{
+    display: flex;
+    flex-direction: column;
+  }
+  .header-main-container{
+    display: flex;
+    flex-direction: row;
+  }
+
+  #container{
+    height: 50vh;
+    position:relative;
+    
+  }
+
+  #container #tweets-container{
+    height: 23rem;
+  }
+
+  header.header{
+    margin-top: 7rem;
+  }
+  .header-img{
+    padding-top: 5rem
+  }
+}
