@@ -13,12 +13,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+
 }
 
 .header-img{
   display: flex;
   justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 

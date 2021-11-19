@@ -105,11 +105,11 @@ header.tweet-header{
 }
 
 .icons .fas{
-  color: rgb(9, 59, 153);
+  color: #e887bb;
 }
 
 .fa-flag:hover, .fa-retweet:hover, .fa-heart:hover{
-  color: cornflowerblue;
+  color:#9DAE7D;
 }
 
 .error-msg{
