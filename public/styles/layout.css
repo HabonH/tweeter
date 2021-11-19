@@ -84,6 +84,16 @@ header.tweet-header{
   padding-top: 0.5em;
 }
 
+header.tweet-header strong{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;    
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.5em;
+  color: rgb(252, 203, 211);
+}
+
 .far{
 
   padding-right: 0.5em;

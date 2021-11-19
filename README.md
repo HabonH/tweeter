@@ -16,3 +16,14 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+
+## Screenshots
+
+!["Desktop and Tablet design before tweets"](https://github.com/HabonH/tinyapp/blob/master/docs/urls_page2.png?raw=true)
+
+!["Desktop and Tablet design after tweets"](https://github.com/HabonH/tinyapp/blob/master/docs/urls_page2.png?raw=true)
+
+!["Mobile design before tweets"](https://github.com/HabonH/tinyapp/blob/master/docs/urls_page2.png?raw=true)
+
+!["Mobile design after tweets"](https://github.com/HabonH/tinyapp/blob/master/docs/urls_page2.png?raw=true)

@@ -5,14 +5,14 @@ nav {
   align-items: center;
   position: sticky;
   width: 100vw;
-  height: 6vh;
+  height: 120px;
   padding-right: 1.5em;
-  padding-left: 1em;
+  padding-left: 1.5em;
   background-color: #e887bb;
-  background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
+  background-image: url(https://www.transparenttextures.com/patterns/back-pattern.png);
   color: #FFFFFF;
   z-index: 1;
-  top: 0px
+  top: 0px;
 }
 
 .nav-div{
@@ -35,16 +35,3 @@ nav {
   padding-top: 0.5rem;
 }
 
-
-/* @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  nav{
-    background-color: #4056A1;
-    background-image: none;
-  }
-}
-@media only screen and (min-width: 1024px) and (max-width: 1700px)  {
-  nav{
-    background-color: #4056A1;
-    background-image: none;
-  }
-} */
