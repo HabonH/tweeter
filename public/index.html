@@ -4,25 +4,26 @@
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
-  
+
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-  type="text/css" />
+    type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
+
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" /><link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@300;600&display=swap"
-  rel="stylesheet">
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@300;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-  integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
-  integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -43,8 +44,7 @@
   <div class="header-main-container">
     <header class="header">
       <div class="header-img">
-        <img src="/images/profile-hex.png"
-        class="profile-avatar">
+        <img src="/images/profile-hex.png" class="profile-avatar">
       </div>
       <br>
       <div>
@@ -53,27 +53,28 @@
         color: #FFFFFF;">Nezuko Kamado</h2>
       </div>
     </header>
-    
+
     <!-- Page-specific (main) content here -->
     <main id="container">
-      <section class="new-tweet"><form id="data" class="new-tweet-form" method="post" action="/tweets/">
-        <textarea name="text" id="tweet-text" placeholder="What are you humming about?" autofocus></textarea>
-        <div class="submitbttn-counter-container">
-          <button style="
+      <section class="new-tweet">
+        <form id="data" class="new-tweet-form" method="post" action="/tweets/">
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?" autofocus></textarea>
+          <div class="submitbttn-counter-container">
+            <button style="
           background-color: #e887bb;
           color: #FFFFFF;
           border: transparent;
           padding-top: 3px;
           padding-bottom: 3px;
-          font-size: large;"
-          type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
-      </form>
-      <script class="error-msg"></script>
-    </section>
-    <section id="tweets-container"></section>
-  </main>
-</div>
+          font-size: large;" type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+        <script class="error-msg"></script>
+      </section>
+      <section id="tweets-container"></section>
+    </main>
+  </div>
 </body>
+
 </html>

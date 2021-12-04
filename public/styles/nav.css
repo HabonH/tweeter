@@ -21,7 +21,7 @@ nav {
   justify-content: center;
   align-items: center;
   padding-top: 0.5rem;
-  font-size: initial;
+  font-size: smaller;
 }
 
 .fas {

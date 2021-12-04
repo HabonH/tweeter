@@ -1,15 +1,12 @@
-// /*
-//  * Client-side JS logic goes here
-//  * jQuery is already loaded
-//  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
-//  */
 
+// Prevents script inputs in text area
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
+// Creates a new tweet with html format
 const createTweetElement = function (tweetData) {
   let $tweet = `<article class="tweet">
   <header class="tweet-header">
@@ -30,12 +27,14 @@ const createTweetElement = function (tweetData) {
   return $tweet;
 };
 
-
+// Adds new tweet to tweet container
 const renderTweets = function (tweets) {
+  $('#tweets-container').empty();
   for (const tweet of tweets) {
     $('#tweets-container').prepend(createTweetElement(tweet));
   }
 };
+
 
 $(document).ready(function () {
   function loadtweets() {
@@ -43,8 +42,11 @@ $(document).ready(function () {
     $.get('/tweets').then(function (data) {
       renderTweets(data);
     });
+    
   };
+  loadtweets();
 
+// Prior to submitting tweet, the following determines if tweets are too long or empty before ajax.post
   $('#data').on('submit', function (event) {
     event.preventDefault();
     $(".error-msg").hide();
@@ -63,15 +65,13 @@ $(document).ready(function () {
     } else {
       const $value = $(this).serialize();
       $.post('/tweets', $value).then(function () {
-        loadtweets();
         $("#tweet-text").val("");
         $(".counter").val(140);
-
+        loadtweets();
       });
     }
   });
 });
-
 
 
 

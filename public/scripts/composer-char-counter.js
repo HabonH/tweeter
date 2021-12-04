@@ -1,3 +1,4 @@
+// Verify if user went over 140 characters
 $(document).ready(function () {
 
   $("#tweet-text").on("input", function (event) {

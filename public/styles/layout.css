@@ -110,12 +110,13 @@ header.tweet-header strong{
 
 .icons{ 
   justify-content: space-between;
-  padding-top: 20px;
-  font-size: 0.73em;
+  padding-top: 15px;
+  
 }
 
 .icons .fas{
   color: #e887bb;
+  font-size: small;
 }
 
 .fa-flag:hover, .fa-retweet:hover, .fa-heart:hover{
