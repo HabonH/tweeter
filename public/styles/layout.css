@@ -132,7 +132,9 @@ header.tweet-header strong{
   background-position: 10px center;
   max-width: 460px;
 }
- 
+
+
+/* Responsive design requirement of desktop and tablet */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   body{
     display: flex;
